@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login-style.css">
+    <title>Ser bolsas-Login</title>
+</head>
+<body>
+    <header class= "cabecalho">
+        <img class="cabecalho-imagem" src="logo.svg.svg" alt="Logo da campanha">
+        <nav class="cabecalho-menu">
+         <a class="cabecalho-menu-item" href="cadastro.html"  >Cadastro</a>
+         <a class="cabecalho-menu-item" href="login.html" >Login</a>
+         <a class="cabecalho-menu-item" href="sobre.html"   >Sobre nós</a>
+         <a class="cabecalho-menu-item">Universidades Parceiras</a>
+        </nav>
+    </header> 
+    <div class="main-login">
+        <div class="left-login">
+            <h1>Faça login<br>E não perca essa oportunidade!</h1>
+        </div>
+        <div class="right-login">
+          <div class="card-login">
+             <h1>LOGIN</h1>          
+             <div class="textfield">
+               <label for="email">Email</label>
+               <input type="text" name="email" placeholder="Email" class="inputs required">
+               
+             </div>  
+                <div class="textfield">
+                  <label for="senha">Senha</label>
+                  <input type="password" name="senha" placeholder="senha" class="inputs required"> 
+                         
+            </div>
+            <button class="btn-login">Login</button>
+        </div>
+    </div>
+</body>
+<script>
+const form   = document.getElementById('form');
+const campos = document.querySelectorAll('.inputs required');
+const spans  = document.querySelectorAll('span-required');
+const emailRegex = /^(\w+)@[a-z]+(\.[a-z]+){1,2}$/i;
+
+function setError(index){
+   campos[index].style.border = '2px solid #e63636';
+   spans[index].style.display = 'block';
+}
+
+</script>
+</html>
